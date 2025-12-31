@@ -20,7 +20,7 @@ def draw_office_plan():
     def add_rect(x, y, w, h, label, color='#E0E0E0', label_color='black'):
         rect = patches.Rectangle((x, y), w, h, linewidth=1, edgecolor='#555555', facecolor=color)
         ax.add_patch(rect)
-        ax.text(x + w/2, y + h/2, label, ha='center', va='center', fontsize=9, color=label_color, fontname='Heiti TC')
+        ax.text(x + w/2, y + h/2, label, ha='center', va='center', fontsize=9, color=label_color, fontname='WenQuanYi Zen Hei')
 
     def add_chair(x, y, direction):
         # 簡單的椅子示意圖
@@ -74,7 +74,7 @@ def draw_office_plan():
     add_rect(400, 280, 50, 120, "矮櫃", color='#E1D5E7')
     # 白板 (牆上標示)
     ax.plot([448, 448], [280, 430], color='#0066CC', linewidth=4)
-    ax.text(435, 355, "白板", rotation=90, ha='center', va='center', color='#0066CC', fontname='Heiti TC')
+    ax.text(435, 355, "白板", rotation=90, ha='center', va='center', color='#0066CC', fontname='WenQuanYi Zen Hei')
 
     # D. 入口與茶水設備區 (下方牆面)
     # 門 (右下角)
@@ -82,7 +82,7 @@ def draw_office_plan():
     ax.plot([450, 450], [0, door_width], color='#B85450', linewidth=3) # 門框
     door_arc = patches.Arc((450, 0), door_width*2, door_width*2, theta1=90, theta2=180, color='#B85450', linestyle=':')
     ax.add_patch(door_arc)
-    ax.text(400, 45, "入口", color='#B85450', fontname='Heiti TC')
+    ax.text(400, 45, "入口", color='#B85450', fontname='WenQuanYi Zen Hei')
 
     # 設備
     add_rect(150, 0, 60, 60, "印表機", color='#F8CECC')
@@ -93,21 +93,21 @@ def draw_office_plan():
     # 尺寸標註
     ax.arrow(-20, 0, 0, room_length, head_width=10, head_length=10, fc='k', ec='k')
     ax.arrow(-20, room_length, 0, -room_length, head_width=10, head_length=10, fc='k', ec='k')
-    ax.text(-35, room_length/2, f'長 {room_length} cm', va='center', rotation=90, fontname='Heiti TC')
+    ax.text(-35, room_length/2, f'長 {room_length} cm', va='center', rotation=90, fontname='WenQuanYi Zen Hei')
 
     ax.arrow(0, -20, room_width, 0, head_width=10, head_length=10, fc='k', ec='k')
     ax.arrow(room_width, -20, -room_width, 0, head_width=10, head_length=10, fc='k', ec='k')
-    ax.text(room_width/2, -35, f'寬 {room_width} cm', ha='center', fontname='Heiti TC')
+    ax.text(room_width/2, -35, f'寬 {room_width} cm', ha='center', fontname='WenQuanYi Zen Hei')
 
     # 走道文字
-    ax.text(200, 330, "走 道 (Aisle)", ha='center', fontsize=12, color='#666666', fontname='Heiti TC')
+    ax.text(200, 330, "走 道 (Aisle)", ha='center', fontsize=12, color='#666666', fontname='WenQuanYi Zen Hei')
 
     # 北向指標
     ax.arrow(-30, 650, 0, 40, head_width=15, head_length=15, fc='k', ec='k')
-    ax.text(-30, 630, "N", ha='center', fontname='Heiti TC')
+    ax.text(-30, 630, "N", ha='center', fontname='WenQuanYi Zen Hei')
 
     # 標題
-    ax.set_title("辦公室室內設計平面配置圖 (依照草圖繪製)", fontsize=16, pad=20, fontname='Heiti TC')
+    ax.set_title("辦公室室內設計平面配置圖 (依照草圖繪製)", fontsize=16, pad=20, fontname='WenQuanYi Zen Hei')
 
     plt.axis('off') # 隱藏座標軸
     plt.tight_layout()
